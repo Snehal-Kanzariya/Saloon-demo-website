@@ -1,0 +1,71 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// UI chrome
+import PageLoader         from "../components/ui/PageLoader";
+import CustomCursor       from "../components/ui/CustomCursor";
+import ScrollProgress     from "../components/ui/ScrollProgress";
+import Navbar             from "../components/ui/Navbar";
+import MarqueeStrip       from "../components/ui/MarqueeStrip";
+import StatsSection       from "../components/ui/StatsSection";
+import Footer             from "../components/ui/Footer";
+
+// Sections
+import HeroSection        from "../components/sections/HeroSection";
+import ServicesSection    from "../components/sections/ServicesSection";
+import ParallaxDivider    from "../components/sections/ParallaxDivider";
+import StylistsSection    from "../components/sections/StylistsSection";
+import GallerySection     from "../components/sections/GallerySection";
+import TestimonialsSection from "../components/sections/TestimonialsSection";
+import BookingSection     from "../components/sections/BookingSection";
+import PressSection       from "../components/sections/PressSection";
+
+import "../styles/global.css";
+---
+
+<Layout>
+  <!-- Cinematic page loader (mounts first, unmounts after ~2.8s) -->
+  <PageLoader client:only="react" />
+
+  <!-- Custom magnetic cursor (pointer devices only, self-skips on touch) -->
+  <CustomCursor client:only="react" />
+
+  <!-- Scroll progress bar (top edge) -->
+  <ScrollProgress client:only="react" />
+
+  <!-- Navigation -->
+  <Navbar client:only="react" />
+
+  <!-- ① Hero + 3D scene -->
+  <HeroSection client:only="react" />
+
+  <!-- ② Marquee ticker -->
+  <MarqueeStrip client:only="react" />
+
+  <!-- ③ Services -->
+  <ServicesSection client:only="react" />
+
+  <!-- ④ Stats bar -->
+  <StatsSection client:only="react" />
+
+  <!-- ⑤ Philosophy divider (parallax) -->
+  <ParallaxDivider client:only="react" />
+
+  <!-- ⑥ Stylists (3D tilt cards + real photos) -->
+  <StylistsSection client:only="react" />
+
+  <!-- ⑦ Gallery -->
+  <GallerySection client:only="react" />
+
+  <!-- ⑧ Testimonials -->
+  <TestimonialsSection client:only="react" />
+
+  <!-- ⑨ Press / Awards -->
+  <PressSection client:only="react" />
+
+  <!-- ⑩ Booking form -->
+  <BookingSection client:only="react" />
+
+  <!-- Footer -->
+  <Footer client:only="react" />
+</Layout>
