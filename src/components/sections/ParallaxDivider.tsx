@@ -87,7 +87,7 @@ export default function ParallaxDivider({
         {/* Top animated line */}
         <div className="relative mb-10 flex items-center gap-6 w-full max-w-xl justify-center">
           <motion.div
-            style={{ width: lineW, background: "linear-gradient(90deg, transparent, #b76e79)", height: "1px", maxWidth: "120px" }}
+            style={{ background: "linear-gradient(90deg, transparent, #b76e79)", height: "1px", maxWidth: "120px" }}
             initial={{ width: "0%" }}
             whileInView={{ width: "100%" }}
             viewport={{ once: true }}

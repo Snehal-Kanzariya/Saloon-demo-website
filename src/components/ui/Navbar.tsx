@@ -133,7 +133,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              onClick={() => setMenuOpen(false)}
+              onClick={() => setTimeout(() => setMenuOpen(false), 300)}
               className="text-white/40 text-sm tracking-widest uppercase font-light border-b py-4"
               style={{ borderColor: "rgba(255,255,255,0.05)" }}
             >
@@ -142,7 +142,7 @@ export default function Navbar() {
           ))}
           <a
             href="#booking"
-            onClick={() => setMenuOpen(false)}
+            onClick={() => setTimeout(() => setMenuOpen(false), 300)}
             className="text-center py-4 border text-xs tracking-widest uppercase font-light text-white mt-2"
             style={{ borderColor: "#b76e79" }}
           >
